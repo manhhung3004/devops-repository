@@ -1,8 +1,8 @@
 filebeat.inputs:
 - type: filestream
- id: default-filestream
- paths:
-   - ingest_data/*.log
+  id: default-filestream
+  paths:
+    - ingest_data/*.log
 
 
 filebeat.autodiscover:
@@ -17,13 +17,13 @@ processors:
 
 setup.kibana:
  host: ${KIBANA_HOSTS}
- username: ${ELASTIC_USER}
- password: ${ELASTIC_PASSWORD}
+ username: "elastic"
+ password: "password"
 
 
 output.elasticsearch:
- hosts: ${ELASTIC_HOSTS}
- username: ${ELASTIC_USER}
- password: ${ELASTIC_PASSWORD}
+ hosts: https://es01:9200
+ username: "elastic"
+ password: "password"
  ssl.enabled: true
  ssl.certificate_authorities: "certs/ca/ca.crt"

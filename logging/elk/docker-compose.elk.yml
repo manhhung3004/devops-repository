@@ -90,6 +90,7 @@ services:
     environment:
       - ES_JAVA_OPTS=-Xms1g -Xmx1g
       - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - discovery.type=single-node
       - bootstrap.memory_lock=false
       - xpack.security.enabled=true
       - xpack.security.http.ssl.enabled=true
