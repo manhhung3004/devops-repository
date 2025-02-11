@@ -1,0 +1,45 @@
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: [info] Please report snap info output:
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: name:    snap-store
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: summary: Snap Store is a graphical desktop application for discovering, installing and managing
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   snaps on Linux.
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: publisher: Canonical**
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: store-url: https://snapcraft.io/snap-store
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: contact:   https://bugs.launchpad.net/snap-store/
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: license:   unset
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: description: |
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   Snap Store showcases featured and popular applications with useful descriptions, ratings,
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   reviews and screenshots.
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   Applications can be found either through browsing categories or by searching.
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   Snap Store can also be used to switch channels, view and alter snap permissions and view and
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   submit reviews and ratings.
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   Snap Store is based on GNOME Software, optimized for the Snap experience.
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: commands:
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   - snap-store
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   - snap-store.ubuntu-software
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   - snap-store.ubuntu-software-local-file
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: snap-id:      gjf3IPXoRiipCu9K0kVu52f0H56fIksg
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: tracking:     latest/stable/ubuntu-22.04
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: refresh-date: 2025-02-07T08:11:57+07:00
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: channels:
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   2/stable:          0+git.7a3a49a6   2024-12-19T11:39:58Z (1248) 11MB -
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   2/candidate:       ^
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   2/beta:            ^
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   2/edge:            0+git.6918cc47   2025-02-06T20:46:28Z (1254) 11MB -
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   latest/stable:     41.3-72-g80e7130 2024-09-22T22:13:47Z (1216) 12MB -
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   latest/candidate:  ^
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   latest/beta:       ^
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   latest/edge:       0+git.6918cc47   2025-02-06T20:46:28Z (1254) 11MB -
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   preview/stable:    --
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   preview/candidate: 0.2.7-alpha      2023-02-02T04:14:20Z  (864) 10MB -
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   preview/beta:      ^
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   preview/edge:      0.3.0-alpha      2023-08-14T08:24:20Z (1017) 11MB -
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   1/stable:          41.3-72-g80e7130 2024-09-22T22:13:12Z (1216) 12MB -
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   1/candidate:       ^
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   1/beta:            ^
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]:   1/edge:            41.3-72-g80e7130 2024-09-16T21:18:05Z (1216) 12MB -
+Feb 11 09:13:40 ATA-22-403-0070 fusioninventory-agent[12856]: installed:           41.3-72-g80e7130                      (1216) 12MB -
+Feb 11 09:14:07 ATA-22-403-0070 kernel: [ 2969.417049] audit: type=1400 audit(1739240047.978:628): apparmor="ALLOWED" operation="open" class="file" profile="/usr/sbin/sssd" name="/proc/13376/cmdline" pid=1055 comm="sssd_nss" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+

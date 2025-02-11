@@ -1,0 +1,29 @@
+Feb 10 08:16:30 ATA-22-403-0070 cron[988]: (CRON) INFO (Running @reboot jobs)
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Starting User Login Management...
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Starting Permit User Sessions...
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: sssd-nss.socket: Control process exited, code=exited, status=17/n/a
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: sssd-nss.socket: Failed with result 'exit-code'.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Failed to listen on SSSD NSS Service responder socket.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: sssd-pam-priv.socket: Control process exited, code=exited, status=17/n/a
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: sssd-pam-priv.socket: Failed with result 'exit-code'.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Failed to listen on SSSD PAM Service responder private socket.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Dependency failed for SSSD PAM Service responder socket.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: sssd-pam.socket: Job sssd-pam.socket/start failed with result 'dependency'.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Starting SSSD AutoFS Service responder socket...
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Starting SSSD PAC Service responder socket...
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Starting SSSD SSH Service responder socket...
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Starting SSSD Sudo Service responder socket...
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Finished Permit User Sessions.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Listening on SSSD AutoFS Service responder socket.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Listening on SSSD PAC Service responder socket.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Listening on SSSD SSH Service responder socket.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Listening on SSSD Sudo Service responder socket.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Starting GNOME Display Manager...
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Starting Hold until boot process finishes up...
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Started CUPS Scheduler.
+Feb 10 08:16:30 ATA-22-403-0070 accounts-daemon[987]: started daemon version 22.07.5
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Started Accounts Service.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Started User Login Management.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Started Unattended Upgrades Shutdown.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: Started GNOME Display Manager.
+Feb 10 08:16:30 ATA-22-403-0070 systemd[1]: rsyslog.service: Sent signal SIGHUP to main process 740 (rsyslogd) on client request.
