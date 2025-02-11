@@ -22,14 +22,14 @@ metricbeat.modules:
   hosts: ${LOGSTASH_HOSTS}
 
 
-- module: kibana
-  metricsets:
-    - stats
-  period: 10s
-  hosts: ${KIBANA_HOSTS}
-  username: ${ELASTIC_USER}
-  password: ${ELASTIC_PASSWORD}
-  xpack.enabled: true
+    #- module: kibana
+  #  metricsets:
+  #    - stats
+  # period: 10s
+  # hosts: ${KIBANA_HOSTS}
+  # username: ${ELASTIC_USER}
+  # password: ${ELASTIC_PASSWORD}
+  #  xpack.enabled: true
 
 
 - module: docker
@@ -52,11 +52,17 @@ processors:
  - add_docker_metadata: ~
 
 
-output.elasticsearch:
- hosts: "https://es01:9200"
- username: "elastic"
- password: "password"
- ssl:
-   certificate: "certs/es01/es01.crt"
-   certificate_authorities: "certs/ca/ca.crt"
-   key: "certs/es01/es01.key"
+   #output.elasticsearch:
+   # hosts: "https://es01:9200"
+   # username: "elastic"
+   # password: "password"
+   # ssl:
+   #   certificate: "certs/es01/es01.crt"
+   #   certificate_authorities: "certs/ca/ca.crt"
+   #   key: "certs/es01/es01.key"
+output.logstash:
+  hosts: ["logstash:5044"]
+  ssl.enabled: false
+  ssl.certificate_authorities: ["certs/ca/ca.crt"]
+    #  ssl.enabled: false
+    #  ssl.certificate_authorities: ["certs/ca/ca.crt"]
