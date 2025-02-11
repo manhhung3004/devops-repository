@@ -1,13 +1,15 @@
 filebeat.inputs:
-  - type: filestream
-    id: default-filestream
-    paths:
-      - ingest_data/*.log
-  - type: filestream
-    id: filestream-1
-    enabled: false
-    paths:
-      - /var/log/*.log*
+- type: filestream
+  id: default-filestream
+  paths:
+    - ingest_data/*.log
+
+- type: filestream
+  id: filestream-1
+  enabled: false
+  paths:
+    - /var/log/*.log*
+
 
 filebeat.autodiscover:
  providers:
@@ -35,20 +37,14 @@ processors:
       tokenizer: "%{date} %{month} %{time} %{host} %{service}[%{pid}]: %{message}"
       fields: "message"
       target_prefix: "parsed"
-  
+
 setup.kibana:
  host: ${KIBANA_HOSTS}
  username: "elastic"
  password: "password"
 
+
 output.logstash:
   hosts: ["logstash:5044"]
   ssl.enabled: false
   ssl.certificate_authorities: ["certs/ca/ca.crt"]
-
-output.elasticsearch:
- hosts: https://es01:9200
- username: "elastic"
- password: "password"
- ssl.enabled: true
- ssl.certificate_authorities: "certs/ca/ca.crt"
