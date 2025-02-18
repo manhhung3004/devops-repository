@@ -4,16 +4,39 @@ filebeat.inputs:
   paths:
     - ingest_data/*.log
 
+- type: filestream
+  id: filestream-1
+  enabled: false
+  paths:
+    - /var/log/*.log*
+
 
 filebeat.autodiscover:
  providers:
    - type: docker
      hints.enabled: true
 
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
 
 processors:
-- add_docker_metadata: ~
-
+  - decode_json_fields:
+      fields: "message"
+      process_array: false
+      target: "decoded_message"
+      overwrite_keys: false
+      add_error_key: false
+  - decode_json_fields:
+      fields: "event.original"
+      process_array: false
+      target: "decoded_event"
+      overwrite_keys: false
+      add_error_key: false
+  - dissect:
+      tokenizer: "%{date} %{month} %{time} %{host} %{service}[%{pid}]: %{message}"
+      fields: "message"
+      target_prefix: "parsed"
 
 setup.kibana:
  host: ${KIBANA_HOSTS}
@@ -21,9 +44,7 @@ setup.kibana:
  password: "password"
 
 
-output.elasticsearch:
- hosts: https://es01:9200
- username: "elastic"
- password: "password"
- ssl.enabled: true
- ssl.certificate_authorities: "certs/ca/ca.crt"
+output.logstash:
+  hosts: ["logstash:5044"]
+  ssl.enabled: false
+  ssl.certificate_authorities: ["certs/ca/ca.crt"]
