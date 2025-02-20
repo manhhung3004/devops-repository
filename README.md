@@ -41,7 +41,7 @@ Prometheus and Grafana are widely used monitoring tools in DevOps.
 ## Usage
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo-name.git
+   git clone https://github.com/manhhung3004/DevOps-Blog.git
    cd your-repo-name
    ```
 2. Follow the instructions in each directory to set up the Jenkins Shared Library, ELK Stack, or Prometheus & Grafana.
