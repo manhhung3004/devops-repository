@@ -1,4 +1,4 @@
-# NWAX Jenkins Shared Library
+# Jenkins Shared Library
 
 ## Overview
 This repository contains a shared library for **Jenkins** to standardize and streamline CI/CD pipelines for NWAX projects.
