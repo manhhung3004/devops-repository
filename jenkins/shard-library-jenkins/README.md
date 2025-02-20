@@ -1,7 +1,7 @@
 # Jenkins Shared Library
 
 ## Overview
-This repository contains a shared library for **Jenkins** to standardize and streamline CI/CD pipelines for NWAX projects.
+This repository contains a shared library for **Jenkins** to standardize and streamline CI/CD pipelines for projects.
 
 ## Features
 - Reusable pipeline functions
@@ -40,7 +40,7 @@ This repository contains a shared library for **Jenkins** to standardize and str
 ### 1. Load the Shared Library in Jenkins
 Add the following in your **Jenkinsfile**:
 ```groovy
-@Library('nwax-shared-library') _
+@Library('shared-library') _
 ```
 
 ### 2. Using Library Functions
@@ -71,7 +71,7 @@ pipeline {
 Ensure Jenkins is configured to use this shared library:
 1. Go to **Manage Jenkins** > **Configure System**.
 2. Under **Global Pipeline Libraries**, add:
-   - Name: `nwax-shared-library`
+   - Name: `shared-library`
    - Default version: `master` or specific branch
    - Load implicitly: ✅ (optional)
    - Allow default version to be overridden: ✅
