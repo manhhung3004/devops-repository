@@ -1,0 +1,43 @@
+name: prom
+
+volumes:
+  data:
+
+services:
+  prometheus:
+    image: bitnami/prometheus:$PROM_VERSION
+    ports:
+    - 9090:9090
+    command:
+    - --config.file=/opt/bitnami/prometheus/conf/prometheus.yml
+    - --storage.tsdb.retention.time=7d
+    - --web.enable-lifecycle
+    - --web.enable-remote-write-receiver
+    - --web.enable-admin-api
+    volumes:
+    - ./config/prometheus.yml:/opt/bitnami/prometheus/conf/prometheus.yml
+    - ./config/alertrules.yml:/opt/bitnami/prometheus/conf/alertrules.yml
+    - ./rules:/opt/bitnami/prometheus/conf/rules
+    - data:/opt/bitnami
+    restart: always
+  alertmanager:
+    image: prom/alertmanager:latest
+    restart: unless-stopped
+    ports:
+      - 9093:9093
+    volumes:
+      - ./config/alertmanager.yml:/config/alertmanager.yml
+      - /etc/prometheus-docker/alertmanager/data:/data
+    command: --config.file=/config/alertmanager.yml --log.level=debug
+
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    command:
+      - '--path.rootfs=/host'
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - '/:/host:ro,rslave'
+    ports:
+    - 9100:9100 
+  

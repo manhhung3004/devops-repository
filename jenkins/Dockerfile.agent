@@ -1,0 +1,14 @@
+FROM ubuntu:20.04
+RUN apt-get update && \
+    apt-get install -qy openjdk-13-jdk && \
+    apt-get install -qy git && \
+    apt-get install -qy maven && \
+    apt-get install -qy openssh-server && \
+    mkdir -p /var/run/sshd && \
+    apt-get -qy autoremove && \
+    useradd -m jenkins -s /bin/bash && \
+    mkdir -p /home/jenkins/.ssh/
+COPY jenkins_agent_key.pub /home/jenkins/.ssh/authorized_keys
+RUN chown -R jenkins:jenkins /home/jenkins/.ssh/
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
