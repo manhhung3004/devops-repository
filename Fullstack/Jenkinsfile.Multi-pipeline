@@ -1,0 +1,65 @@
+pipeline {
+    agent {
+        label 'agent1'
+    }
+
+    parameters {
+        string(name: 'ENVIRONMENT_SERVICE', defaultValue: 'main', description: 'Branch to build & deploy')
+        string(name: 'TYPE', defaultValue: '', description: 'Trigger Frontend or Backend')
+        string(name: 'VERSION', defaultValue: 'latest', description: 'Version of Docker image for Frontend & Backend')
+        booleanParam(name: 'EXECUTE_MIGRATION', defaultValue: false, description: 'Run DB Migration on Backend')
+        booleanParam(name: 'RUN_BOTH', defaultValue: false, description: 'Run both Frontend and Backend pipelines')
+    }
+
+    stages {
+        stage('Trigger Backend Pipeline') {
+            when {
+                expression {
+                    return params.RUN_BOTH || params.TYPE.toLowerCase() == "backend"
+                }
+            }
+            steps {
+                script {
+                    def backendEnv = params.RUN_BOTH ? 'backend' : params.ENVIRONMENT_SERVICE
+                    build job: 'Backend-Fullstack-Ecommerce',
+                    parameters: [
+                        string(name: 'ENVIRONMENT_SERVICE', value: backendEnv),
+                        string(name: 'VERSION', value: "${params.VERSION}"),
+                        booleanParam(name: 'EXECUTE_MIGRATION', value: params.EXECUTE_MIGRATION)
+                    ],
+                    wait: true,
+                    propagate: true
+                }
+            }
+        }
+
+        stage('Trigger Frontend Pipeline') {
+            when {
+                expression {
+                    return params.RUN_BOTH || params.TYPE.toLowerCase() == "frontend"
+                }
+            }
+            steps {
+                script {
+                    def frontendEnv = params.RUN_BOTH ? 'frontend' : params.ENVIRONMENT_SERVICE
+                    build job: 'Frontend-Fullstack-Ecommerce',
+                    parameters: [
+                        string(name: 'ENVIRONMENT_SERVICE', value: frontendEnv),
+                        string(name: 'VERSION', value: "${params.VERSION}")
+                    ],
+                    wait: true,
+                    propagate: true
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Master pipeline completed successfully!'
+        }
+        failure {
+            echo 'Master pipeline failed!'
+        }
+    }
+}

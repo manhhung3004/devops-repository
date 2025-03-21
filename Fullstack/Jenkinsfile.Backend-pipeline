@@ -1,0 +1,85 @@
+@Library('shared-library@main') _
+
+env.DOCKERFILE_NAME = "Dockerfie.Backend"
+env.DOCKER_TAG = "mahhhuhh/backend-fullstack-ecommerce"
+env.DOCKERFILE_DIR = "./02-backend_spring-boot-rest-api"
+env.BRANCH = "main"
+
+pipeline {
+    agent {
+        label 'agent1' 
+    }
+
+    parameters {
+        string(name: 'ENVIRONMENT_SERVICE', defaultValue: 'main', description: 'Branch to build')
+        string(name: 'VERSION', defaultValue: 'latest', description: 'Version tag')
+        booleanParam(name: 'EXECUTE_MIGRATION', defaultValue: false, description: 'Run DB Migration')
+    }
+
+    stages {
+        stage('Checkout SCM') {
+            steps {
+                script {
+                    git(
+                        branch: env.BRANCH,
+                        credentialsId: 'fullstack-ecommerce',
+                        url: 'http://dev-gitlab.hungnm.local/hungnm/fullstack-ecommerce-web.git'
+                    )
+                }
+            }
+        }
+
+        stage('init env') {
+            steps {
+                script {
+                    sh "printenv"
+                }
+            }
+        }
+
+        stage('Build Backend') {
+            steps {
+                dir("${WORKSPACE}/backend") {
+                    git(
+                        branch: env.BRANCH,
+                        credentialsId: 'bashscripts',
+                        url: 'http://dev-gitlab.hungnm.local/hungnm/bashscript.git'
+                    )
+                    script {
+                        buildBackend(env.DOCKERFILE_NAME, env.DOCKER_TAG, env.DOCKERFILE_DIR, "${params.VERSION}")
+                    }
+                }
+            }
+        }
+
+        stage('Deploy Backend') {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
+                        deployBackend(env.DOCKER_TAG, "${params.VERSION}")
+                    }
+                }
+            }
+        }
+
+        stage('Seed Database') {
+            when {
+                expression { return params.EXECUTE_MIGRATION }
+            }
+            steps {
+                script {
+                    seedDatabase()
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failure!'
+        }
+    }
+}

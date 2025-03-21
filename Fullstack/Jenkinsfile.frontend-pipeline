@@ -1,0 +1,44 @@
+@Library('shared-library@main') _
+
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'environment', defaultValue: 'main', description: 'Branch to build')
+    }
+
+    stages {
+        stage('Checkout Frontend') {
+            steps {
+                script {
+                    checkoutRepo('frontend', params.environment)
+                }
+            }
+        }
+
+        stage('Build Frontend') {
+            steps {
+                script {
+                    buildFrontend()
+                }
+            }
+        }
+
+        stage('Deploy Frontend') {
+            steps {
+                script {
+                    deployFrontend()
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failure!'
+        }
+    }
+}
