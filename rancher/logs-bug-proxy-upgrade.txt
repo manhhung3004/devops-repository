@@ -1,0 +1,103 @@
+2025/09/05 08:37:27 [ERROR] 2025/09/05 08:37:27 http: TLS handshake error from 10.42.0.29:47972: remote error: tls: bad certificate
+2025/09/05 08:37:27 [ERROR] 2025/09/05 08:37:27 http: TLS handshake error from 10.42.0.29:47976: remote error: tls: bad certificate
+2025/09/05 08:38:43 [INFO] CacheFor STARTS creating informer for /v1, Kind=Node
+2025/09/05 08:38:43 [INFO] CacheFor STARTS creating informer for /v1, Kind=Endpoints
+2025/09/05 08:38:43 [INFO] Started SQL cache garbage collection for _v1_Endpoints (interval=15m0s, keep=1000)
+2025/09/05 08:38:43 [INFO] CacheFor STARTS creating informer for apps/v1, Kind=Deployment
+2025/09/05 08:38:43 [INFO] Started SQL cache garbage collection for _v1_Node (interval=15m0s, keep=1000)
+2025/09/05 08:38:43 [INFO] CacheFor STARTS creating informer for /v1, Kind=Event
+2025/09/05 08:38:43 [INFO] Started SQL cache garbage collection for apps_v1_Deployment (interval=15m0s, keep=1000)
+2025/09/05 08:38:43 [INFO] Started SQL cache garbage collection for _v1_Event (interval=15m0s, keep=1000)
+2025/09/05 08:38:43 [INFO] CacheFor IS DONE creating informer for /v1, Kind=Node (took 176.191303ms)
+2025/09/05 08:38:43 [INFO] CacheFor IS DONE creating informer for /v1, Kind=Endpoints (took 219.599365ms)
+2025/09/05 08:38:43 [INFO] CacheFor IS DONE creating informer for apps/v1, Kind=Deployment (took 247.488368ms)
+2025/09/05 08:38:43 [INFO] CacheFor IS DONE creating informer for /v1, Kind=Event (took 638.167223ms)
+2025/09/05 08:38:48 [INFO] CacheFor STARTS creating informer for /v1, Kind=Secret
+2025/09/05 08:38:48 [INFO] Started SQL cache garbage collection for _v1_Secret (interval=15m0s, keep=1000)
+2025/09/05 08:38:49 [INFO] CacheFor IS DONE creating informer for /v1, Kind=Secret (took 208.969856ms)
+2025/09/05 08:44:58 [INFO] CacheFor STARTS creating informer for management.cattle.io/v3, Kind=User
+2025/09/05 08:44:58 [INFO] Started SQL cache garbage collection for management.cattle.io_v3_User (interval=15m0s, keep=1000)
+2025/09/05 08:44:58 [INFO] CacheFor STARTS creating informer for management.cattle.io/v3, Kind=ClusterRoleTemplateBinding
+2025/09/05 08:44:58 [INFO] Started SQL cache garbage collection for management.cattle.io_v3_ClusterRoleTemplateBinding (interval=15m0s, keep=1000)
+2025/09/05 08:44:58 [INFO] CacheFor STARTS creating informer for management.cattle.io/v3, Kind=RoleTemplate
+2025/09/05 08:44:58 [INFO] Started SQL cache garbage collection for management.cattle.io_v3_RoleTemplate (interval=15m0s, keep=1000)
+2025/09/05 08:44:58 [INFO] CacheFor IS DONE creating informer for management.cattle.io/v3, Kind=User (took 103.90297ms)
+2025/09/05 08:44:58 [INFO] CacheFor IS DONE creating informer for management.cattle.io/v3, Kind=ClusterRoleTemplateBinding (took 103.87205ms)
+2025/09/05 08:44:58 [INFO] CacheFor IS DONE creating informer for management.cattle.io/v3, Kind=RoleTemplate (took 104.105281ms)
+2025/09/05 08:44:58 [INFO] CacheFor STARTS creating informer for catalog.cattle.io/v1, Kind=ClusterRepo
+2025/09/05 08:44:58 [INFO] Started SQL cache garbage collection for catalog.cattle.io_v1_ClusterRepo (interval=15m0s, keep=1000)
+2025/09/05 08:44:58 [INFO] CacheFor IS DONE creating informer for catalog.cattle.io/v1, Kind=ClusterRepo (took 105.399109ms)
+2025/09/05 08:51:12 [INFO] CacheFor STARTS creating informer for apps/v1, Kind=ReplicaSet
+2025/09/05 08:51:12 [INFO] CacheFor STARTS creating informer for /v1, Kind=PersistentVolumeClaim
+2025/09/05 08:51:12 [INFO] Started SQL cache garbage collection for apps_v1_ReplicaSet (interval=15m0s, keep=1000)
+2025/09/05 08:51:12 [INFO] CacheFor STARTS creating informer for /v1, Kind=ReplicationController
+2025/09/05 08:51:12 [INFO] CacheFor STARTS creating informer for storage.k8s.io/v1, Kind=StorageClass
+2025/09/05 08:51:12 [INFO] CacheFor STARTS creating informer for apps/v1, Kind=StatefulSet
+2025/09/05 08:51:12 [INFO] Started SQL cache garbage collection for _v1_PersistentVolumeClaim (interval=15m0s, keep=1000)
+2025/09/05 08:51:12 [INFO] Started SQL cache garbage collection for storage.k8s.io_v1_StorageClass (interval=15m0s, keep=1000)
+2025/09/05 08:51:12 [INFO] CacheFor STARTS creating informer for apps/v1, Kind=DaemonSet
+2025/09/05 08:51:12 [INFO] Started SQL cache garbage collection for apps_v1_DaemonSet (interval=15m0s, keep=1000)
+2025/09/05 08:51:12 [INFO] CacheFor IS DONE creating informer for apps/v1, Kind=ReplicaSet (took 107.968231ms)
+2025/09/05 08:51:12 [INFO] Started SQL cache garbage collection for apps_v1_StatefulSet (interval=15m0s, keep=1000)
+2025/09/05 08:51:12 [INFO] CacheFor STARTS creating informer for batch/v1, Kind=Job
+2025/09/05 08:51:12 [INFO] CacheFor IS DONE creating informer for /v1, Kind=PersistentVolumeClaim (took 109.117273ms)
+2025/09/05 08:51:12 [INFO] Started SQL cache garbage collection for batch_v1_Job (interval=15m0s, keep=1000)
+2025/09/05 08:51:12 [INFO] CacheFor IS DONE creating informer for storage.k8s.io/v1, Kind=StorageClass (took 136.861839ms)
+2025/09/05 08:51:12 [INFO] Started SQL cache garbage collection for _v1_ReplicationController (interval=15m0s, keep=1000)
+2025/09/05 08:51:13 [INFO] CacheFor IS DONE creating informer for apps/v1, Kind=DaemonSet (took 131.115505ms)
+2025/09/05 08:51:13 [INFO] CacheFor IS DONE creating informer for apps/v1, Kind=StatefulSet (took 205.943075ms)
+2025/09/05 08:51:13 [INFO] CacheFor IS DONE creating informer for batch/v1, Kind=Job (took 109.78278ms)
+2025/09/05 08:51:13 [INFO] CacheFor IS DONE creating informer for /v1, Kind=ReplicationController (took 237.194479ms)
+2025/09/05 08:55:09 [ERROR] Error during subscribe websocket: close sent
+2025/09/05 08:55:12 [ERROR] Error during subscribe websocket: close sent
+2025/09/05 08:55:40 [ERROR] Error during subscribe websocket: close sent
+2025/09/05 08:56:01 [INFO] CacheFor STARTS creating informer for catalog.cattle.io/v1, Kind=UIPlugin
+2025/09/05 08:56:01 [INFO] Started SQL cache garbage collection for catalog.cattle.io_v1_UIPlugin (interval=15m0s, keep=1000)
+2025/09/05 08:56:01 [INFO] CacheFor STARTS creating informer for catalog.cattle.io/v1, Kind=Operation
+2025/09/05 08:56:01 [INFO] Started SQL cache garbage collection for catalog.cattle.io_v1_Operation (interval=15m0s, keep=1000)
+2025/09/05 08:56:01 [INFO] CacheFor IS DONE creating informer for catalog.cattle.io/v1, Kind=UIPlugin (took 119.258056ms)
+2025/09/05 08:56:01 [INFO] CacheFor IS DONE creating informer for catalog.cattle.io/v1, Kind=Operation (took 109.542092ms)
+2025/09/05 08:56:03 [INFO] CacheFor STARTS creating informer for fleet.cattle.io/v1alpha1, Kind=Bundle
+2025/09/05 08:56:03 [INFO] CacheFor STARTS creating informer for fleet.cattle.io/v1alpha1, Kind=ClusterGroup
+2025/09/05 08:56:03 [INFO] CacheFor STARTS creating informer for fleet.cattle.io/v1alpha1, Kind=GitRepo
+2025/09/05 08:56:03 [INFO] CacheFor STARTS creating informer for fleet.cattle.io/v1alpha1, Kind=HelmOp
+2025/09/05 08:56:03 [INFO] Started SQL cache garbage collection for fleet.cattle.io_v1alpha1_Bundle (interval=15m0s, keep=1000)
+2025/09/05 08:56:03 [INFO] Started SQL cache garbage collection for fleet.cattle.io_v1alpha1_HelmOp (interval=15m0s, keep=1000)
+2025/09/05 08:56:03 [INFO] CacheFor STARTS creating informer for fleet.cattle.io/v1alpha1, Kind=Cluster
+2025/09/05 08:56:03 [INFO] Started SQL cache garbage collection for fleet.cattle.io_v1alpha1_ClusterGroup (interval=15m0s, keep=1000)
+2025/09/05 08:56:03 [INFO] Started SQL cache garbage collection for fleet.cattle.io_v1alpha1_GitRepo (interval=15m0s, keep=1000)
+2025/09/05 08:56:03 [INFO] Started SQL cache garbage collection for fleet.cattle.io_v1alpha1_Cluster (interval=15m0s, keep=1000)
+2025/09/05 08:56:03 [INFO] CacheFor IS DONE creating informer for fleet.cattle.io/v1alpha1, Kind=Bundle (took 105.139135ms)
+2025/09/05 08:56:03 [INFO] CacheFor IS DONE creating informer for fleet.cattle.io/v1alpha1, Kind=HelmOp (took 104.555021ms)
+2025/09/05 08:56:03 [INFO] CacheFor IS DONE creating informer for fleet.cattle.io/v1alpha1, Kind=ClusterGroup (took 123.335109ms)
+2025/09/05 08:56:03 [INFO] CacheFor IS DONE creating informer for fleet.cattle.io/v1alpha1, Kind=GitRepo (took 148.553802ms)
+2025/09/05 08:56:03 [INFO] CacheFor IS DONE creating informer for fleet.cattle.io/v1alpha1, Kind=Cluster (took 163.930079ms)
+2025/09/05 08:56:41 [ERROR] Error during subscribe websocket: close sent
+2025/09/05 08:57:36 [INFO] error in remotedialer server [400]: websocket: close 1006 (abnormal closure): unexpected EOF
+2025/09/05 08:57:36 [INFO] error in remotedialer server [400]: websocket: close 1006 (abnormal closure): unexpected EOF
+2025/09/05 08:57:38 [INFO] Handling backend connection request [c-7jfjf]
+2025/09/05 08:57:39 [INFO] error in remotedialer server [400]: websocket: close 1006 (abnormal closure): unexpected EOF
+2025/09/05 08:57:39 [INFO] error in remotedialer server [400]: websocket: close 1006 (abnormal closure): unexpected EOF
+2025/09/05 08:57:41 [INFO] Handling backend connection request [c-7jfjf]
+2025/09/05 08:57:41 [ERROR] Failed to handle tunnel request from remote address 172.22.0.1:57342 (X-Forwarded-For: 172.20.0.1): response 401: failed authentication
+2025/09/05 08:57:41 [INFO] Handling backend connection request [stv-cluster-c-7jfjf]
+2025/09/05 08:57:46 [ERROR] Failed to handle tunnel request from remote address 172.22.0.1:57366 (X-Forwarded-For: 172.20.0.1): response 401: failed authentication
+2025/09/05 08:57:47 [INFO] Handling backend connection request [stv-cluster-c-7jfjf]
+2025/09/05 08:57:47 [INFO] error in remotedialer server [400]: websocket: close 1006 (abnormal closure): unexpected EOF
+2025/09/05 08:57:47 [INFO] error in remotedialer server [400]: websocket: close 1006 (abnormal closure): unexpected EOF
+2025/09/05 08:57:47 [INFO] error in remotedialer server [400]: websocket: close 1006 (abnormal closure): unexpected EOF
+2025/09/05 08:57:47 [INFO] error in remotedialer server [400]: websocket: close 1006 (abnormal closure): unexpected EOF
+2025/09/05 08:57:49 [INFO] Handling backend connection request [c-7jfjf]
+2025/09/05 08:57:50 [ERROR] Failed to handle tunnel request from remote address 172.22.0.1:49000 (X-Forwarded-For: 172.20.0.1): response 401: failed authentication
+2025/09/05 08:57:50 [INFO] Handling backend connection request [stv-cluster-c-7jfjf]
+2025/09/05 08:57:51 [INFO] Handling backend connection request [c-7jfjf]
+2025/09/05 08:57:56 [ERROR] Failed to handle tunnel request from remote address 172.22.0.1:49052 (X-Forwarded-For: 172.20.0.1): response 401: failed authentication
+2025/09/05 08:57:56 [INFO] Handling backend connection request [stv-cluster-c-7jfjf]
+2025/09/05 08:58:06 [ERROR] Error during subscribe websocket: close sent
+2025/09/05 08:58:08 [ERROR] Error during subscribe websocket: close sent
+2025/09/05 08:58:17 [INFO] CacheFor STARTS creating informer for /v1, Kind=Pod
+2025/09/05 08:58:17 [INFO] Started SQL cache garbage collection for _v1_Pod (interval=15m0s, keep=1000)
+2025/09/05 08:58:18 [INFO] CacheFor IS DONE creating informer for /v1, Kind=Pod (took 577.883055ms)
+2025/09/05 08:58:20 [ERROR] Error during subscribe websocket: close sent
+2025/09/05 08:59:35 [ERROR] Error during subscribe websocket: close sent
+2025/09/05 09:02:04 [ERROR] Error during subscribe websocket: close sent

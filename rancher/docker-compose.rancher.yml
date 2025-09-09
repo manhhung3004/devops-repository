@@ -1,0 +1,26 @@
+version: '3'
+services:
+  rancher:
+    image: rancher/rancher:latest
+    restart: unless-stopped
+    ports:
+      - 81:80
+      - 444:443
+    privileged: true
+
+# version: "3.8"
+# services:
+#   rancher:
+#     image: rancher/rancher:latest
+#     restart: unless-stopped
+#     privileged: true
+#     ports:
+#       - "81:80"
+#       - "444:443"
+#     volumes:
+#       - rancher-data:/var/lib/rancher
+#       # Mount cert vào đúng nơi Rancher đọc
+#       - /certificate/cloudflare/fullchain.pem:/etc/rancher/ssl/cert.pem:ro
+#       - /certificate/cloudflare/key.pem:/etc/rancher/ssl/key.pem:ro
+# volumes:
+#   rancher-data:

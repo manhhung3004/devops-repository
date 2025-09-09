@@ -1,54 +1,47 @@
 # DevOps Learning Repository
 
-This repository is designed for learning and practicing DevOps technologies, including:
+Welcome to the DevOps Learning Repository! This project is dedicated to helping you learn and practice essential DevOps technologies through hands-on examples and practical setups.
 
-- **Jenkins Shared Library**: Creating and using shared libraries for Jenkins pipelines.
-- **Logging with ELK**: Collecting and analyzing logs using Elasticsearch, Logstash, and Kibana.
-- **Monitoring with Prometheus & Grafana**: System monitoring with Prometheus and data visualization with Grafana.
+## Tools Included
 
-## 1. Jenkins Shared Library
-Jenkins Shared Library enables the reuse of pipeline scripts across multiple projects. This repository includes examples of:
-- Directory structure of a Shared Library.
-- Writing reusable Groovy functions.
-- Importing and using a Shared Library in Jenkinsfile.
+This repository covers the following tools:
 
-**Reference:** [Jenkins Shared Library Documentation](https://www.jenkins.io/doc/book/pipeline/shared-libraries/)
+- **Jenkins**: Automate building, deploying, and managing software projects.
+- **Elasticsearch**: Distributed search and analytics engine for log data.
+- **Logstash**: Pipeline for ingesting, transforming, and forwarding logs.
+- **Kibana**: Visualize and explore data stored in Elasticsearch.
+- **Prometheus**: Collect and monitor metrics from your infrastructure.
+- **Grafana**: Create dashboards and visualize metrics from multiple sources.
+- **Airflow**: Automate and schedule data pipelines and workflows.
+- **Harbor**: Secure registry for storing and managing container images.
+- **Nginx**: High-performance web server and reverse proxy.
+- **Rancher**: Manage and deploy Kubernetes clusters.
+- **Vault**: Securely manage secrets and sensitive data.
 
-## 2. Logging with ELK
-The ELK stack (Elasticsearch, Logstash, Kibana) is used for collecting, storing, and analyzing logs.
+## Getting Started
 
-### ELK Stack Configuration:
-- **Elasticsearch**: Stores and searches logs.
-- **Logstash**: Collects, processes, and sends logs to Elasticsearch.
-- **Kibana**: Provides visualization and log analysis.
+To launch the main services, use Docker Compose:
 
-**Reference:** [ELK Stack Documentation](https://www.elastic.co/what-is/elk-stack)
+```sh
+docker-compose up -d
+```
 
-## 3. Monitoring with Prometheus & Grafana
-Prometheus and Grafana are widely used monitoring tools in DevOps.
-
-### Key Components:
-- **Prometheus**: Collects and stores metrics from various systems.
-- **Grafana**: Visualizes metrics in dashboards.
-
-### Deployment Steps:
-1. Install Prometheus and Grafana.
-2. Configure Prometheus to collect data from applications.
-3. Create dashboards in Grafana to visualize Prometheus metrics.
-
-**Reference:** [Prometheus Documentation](https://prometheus.io/docs/) | [Grafana Documentation](https://grafana.com/docs/)
+You can customize ports, environment variables, and service settings by editing the `docker-compose.yml` file.
 
 ## Usage
+
 1. Clone the repository:
    ```sh
    git clone https://github.com/manhhung3004/DevOps-Blog.git
-   cd your-repo-name
+   cd DevOps-Blog
    ```
-2. Follow the instructions in each directory to set up the Jenkins Shared Library, ELK Stack, or Prometheus & Grafana.
-
-## Contribution
-If you would like to contribute to this repository, please create a Pull Request or open an Issue for discussion.
+2. Start the services:
+   ```sh
+   docker-compose up -d
+   ```
+3. Adjust configurations as needed in `docker-compose.yml`.
 
 ## License
-MIT License
+
+This project is licensed under the MIT License.
 

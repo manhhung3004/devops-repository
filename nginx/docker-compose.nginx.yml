@@ -2,16 +2,6 @@ version: '2'
 services:
   proxy:
     build: ./
-    networks:
-    - grafana
-    - kafka
     ports:
     - 80:80
     - 443:443
-networks:
-  grafana:
-    external: true
-    name: grafana_default
-  kafka:
-    external: true
-    name: messages-queues_kafka-network
