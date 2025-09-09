@@ -4,3 +4,4 @@ config.env
 *.tgz
 *.zip
 *.log
+*.pem
